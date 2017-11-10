@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SignUpPage extends PageObject {
+public class SignUpPage  {
 
 	@FindBy(id="firstname")
 	private WebElement firstName;
@@ -20,10 +20,6 @@ public class SignUpPage extends PageObject {
 	
 	@FindBy(id="signup")
 	private WebElement submitButton;
-
-	public SignUpPage(WebDriver driver) {
-		super(driver);
-	}
 
 	public boolean isInitialized() {
 		return firstName.isDisplayed();
@@ -45,8 +41,8 @@ public class SignUpPage extends PageObject {
 		this.zipCode.sendKeys(zipCode);
 	}
 	
-	public ReceiptPage submit(){
+	public void submit(){
 		submitButton.click();
-		return new ReceiptPage(driver);
+	//	return new ReceiptPage(driver);
 	}
 }
