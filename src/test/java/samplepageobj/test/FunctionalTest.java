@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 public class FunctionalTest {
 
 	protected static WebDriver driver;
+	//Comment added by jose
 	
 	@BeforeClass
 	public static void setUp(){
